@@ -1,0 +1,3 @@
+#!/bin/bash
+if(whoami!=guillaume)
+sudo chown betty ./hello
