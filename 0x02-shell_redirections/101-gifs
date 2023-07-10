@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name "*.gif" -printf "%f\n" | awk -F. '{ print $1 }' | sort -f | uniq | tr '\n' '\0' | xargs -0 -I{} printf '%s\n' {}
+find . -type f -iname "*.gif" -printf "%f\n" | sed 's/\.gif$//' | sort -f | tr '\n' '\0' | xargs -0 -I {} echo "{}"
