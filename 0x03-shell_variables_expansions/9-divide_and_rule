@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(${POWER:-0} / ${DIVIDE:-1})"
+awk "BEGIN {printf \"%.2f\n\", (${POWER:-0} / ${DIVIDE:-1})}"
