@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# edit name of file
+l=$(ls)
+for file in $l;
+do
+	echo "$file" | cut -d "-" -f2-
+done
