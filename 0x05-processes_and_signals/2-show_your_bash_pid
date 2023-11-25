@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
+# new
+# shellcheck disable=SC2009
 ps aux --forest | grep "bash"
