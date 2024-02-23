@@ -1,5 +1,5 @@
 # pip
-package{'puppet-lint':
-provider => 'gem',
+include python
+python::pip3{'pip':
 ensure => '2.1.0',
 }
