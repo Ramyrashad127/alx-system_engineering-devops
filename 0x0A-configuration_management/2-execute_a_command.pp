@@ -1,5 +1,5 @@
 # last one
-exec {'pkill':
-command => 'pkill killmenow',
-provider => 'shell',
+exec {'kill_killmenow':
+command     => '/usr/bin/pkill killmenow',
+refreshonly => true,
 }
