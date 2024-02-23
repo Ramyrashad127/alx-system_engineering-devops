@@ -1,4 +1,5 @@
 # pip
-
-exec {'puppet-lint':
-command => '/usr/bin/apt-get -y install puppet-lint -v 2.5.0',}}
+include python3
+python3::pip3{'flask':
+ensure => '2.1.0',
+}
