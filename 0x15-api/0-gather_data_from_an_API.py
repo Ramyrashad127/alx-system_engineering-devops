@@ -9,7 +9,7 @@ import sys
 if __name__ == "__main__":
     id = sys.argv[1]
     tasks = requests.get(
-        "https://jsonplaceholder.typicode.com/users/{id}")
+        f"https://jsonplaceholder.typicode.com/users/{id}")
     name = tasks.json().get('name')
     data = requests.get(
         "https://jsonplaceholder.typicode.com/todos")
