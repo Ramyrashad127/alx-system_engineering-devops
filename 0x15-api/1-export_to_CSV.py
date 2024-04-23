@@ -17,7 +17,7 @@ if __name__ == "__main__":
     ans = data.json()
     file = f"{id}.csv"
     with open(file, 'w') as f:
-        writer = csv.writer(file, delimiter=',', quotechar='"',
+        writer = csv.writer(f, delimiter=',', quotechar='"',
                             quoting=csv.QUOTE_ALL, lineterminator='\n')
         for ele in ans:
             if ele.get('userId') == int(id):
