@@ -25,5 +25,6 @@ if __name__ == "__main__":
             dic['completed'] = ele.get('task')
             dic['username'] = ele.get('username')
             tasks.append(dic)
+        utasks[id] = tasks
         json.dump(tasks, f)
 
