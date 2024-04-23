@@ -26,4 +26,5 @@ if __name__ == "__main__":
             dic['username'] = name
             tasks.append(dic)
         utasks[id] = tasks
+        dic = {}
         json.dump(utasks, f)
