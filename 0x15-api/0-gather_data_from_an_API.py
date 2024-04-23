@@ -11,7 +11,7 @@ if __name__ == "__main__":
     tasks = requests.get(
         "https://jsonplaceholder.typicode.com/users/{}".format(id))
     name = tasks.json().get("name")
-    data =  requests.get(
+    data = requests.get(
         "https://jsonplaceholder.typicode.com/todos/{}".format(id))
     ans = data.json()
     done_tasks = []
@@ -48,4 +48,4 @@ if __name__ == "__main__":
           .format(name, cnt_done, cnt_tot))
     for task in done_tasks:
         print("\t {}".format(task))
-
+        
