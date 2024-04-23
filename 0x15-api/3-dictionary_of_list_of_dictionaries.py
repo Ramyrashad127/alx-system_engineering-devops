@@ -10,7 +10,8 @@ import sys
 if __name__ == "__main__":
     utasks = {}
     tasks = requests.get(
-        f"https://jsonplaceholder.typicode.com/users/")
+        "https://jsonplaceholder.typicode.com/users")
+    tasks = tasks.json()
     for user in tasks:
         data = requests.get(
             "https://jsonplaceholder.typicode.com/todos")
