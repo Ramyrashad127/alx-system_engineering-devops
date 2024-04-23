@@ -9,10 +9,10 @@ import sys
 if __name__ == "__main__":
     id = sys.argv[1]
     tasks = requests.get(
-        "https://jsonplaceholder.typicode.com/users/{}".format(id))
-    name = tasks.json().get("name")
+        'https://jsonplaceholder.typicode.com/users/{}'.format(id))
+    name = tasks.json().get('name')
     data = requests.get(
-        "https://jsonplaceholder.typicode.com/todos")
+        'https://jsonplaceholder.typicode.com/todos')
     ans = data.json()
     done_tasks = []
     cnt_done = 0
@@ -22,7 +22,7 @@ if __name__ == "__main__":
             cnt_tot += 1
             if ele.get("completed"):
                 cnt_done += 1
-                done_tasks.append(ele.get("title"))
+                done_tasks.append(ele.get('title'))
     print("Employee {} is done with tasks({}/{}):"
           .format(name, cnt_done, cnt_tot))
     for task in done_tasks:
