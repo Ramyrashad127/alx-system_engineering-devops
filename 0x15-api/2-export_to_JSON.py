@@ -11,7 +11,7 @@ if __name__ == "__main__":
     id = sys.argv[1]
     tasks = requests.get(
         f"https://jsonplaceholder.typicode.com/users/{id}")
-    name = tasks.json().get('name')
+    name = tasks.json().get('username')
     data = requests.get(
         "https://jsonplaceholder.typicode.com/todos")
     ans = data.json()
@@ -21,9 +21,9 @@ if __name__ == "__main__":
     dic = {}
     with open(file, 'w') as f:
         for ele in ans:
-            dic['task'] = ele.get('task')
-            dic['completed'] = ele.get('task')
-            dic['username'] = ele.get('username')
+            dic['task'] = ele.get('title')
+            dic['completed'] = ele.get('completed')
+            dic['username'] = name
             tasks.append(dic)
         utasks[id] = tasks
         json.dump(utasks, f)
