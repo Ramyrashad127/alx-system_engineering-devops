@@ -12,7 +12,7 @@ if __name__ == "__main__":
         "https://jsonplaceholder.typicode.com/users/{}".format(id))
     name = tasks.json().get("name")
     data = requests.get(
-        "https://jsonplaceholder.typicode.com/todos/")
+        "https://jsonplaceholder.typicode.com/todos")
     ans = data.json()
     done_tasks = []
     cnt_done = 0
