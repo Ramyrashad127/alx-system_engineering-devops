@@ -21,8 +21,8 @@ if __name__ == "__main__":
         if ele.get('userId') == int(id):
             cnt_tot += 1
             if ele.get("completed"):
-                 cnt_done += 1
-                 done_tasks.append(ele.get("title"))
+                cnt_done += 1
+                done_tasks.append(ele.get("title"))
     print("Employee {} is done with tasks({}/{}}):"
           .format(name, cnt_done, cnt_tot))
     for task in done_tasks:
@@ -32,7 +32,7 @@ if __name__ == "__main__":
     tasks = requests.get(
         "https://jsonplaceholder.typicode.com/users/{}".format(id))
     name = tasks.json().get("name")
-    data =  requests.get(
+    data = requests.get(
         "https://jsonplaceholder.typicode.com/todos/{}".format(id))
     ans = data.json()
     done_tasks = []
@@ -42,8 +42,8 @@ if __name__ == "__main__":
         if ele.get('userId') == int(id):
             cnt_tot += 1
             if ele.get("completed"):
-                 cnt_done += 1
-                 done_tasks.append(ele.get("title"))
+                cnt_done += 1
+                done_tasks.append(ele.get("title"))
     print("Employee {} is done with tasks({}}/{}}):"
           .format(name, cnt_done, cnt_tot))
     for task in done_tasks:
