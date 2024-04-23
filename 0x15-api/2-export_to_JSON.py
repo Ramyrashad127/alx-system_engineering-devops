@@ -27,4 +27,3 @@ if __name__ == "__main__":
             tasks.append(dic)
         utasks[id] = tasks
         json.dump(utasks, f)
-
