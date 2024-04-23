@@ -18,7 +18,7 @@ if __name__ == "__main__":
         file = f"{id}.json"
         tasks = []
         dic = {}
-        with open(file, 'w') as f:
+        with open(file, 'a') as f:
             for ele in ans:
                 dic['task'] = ele.get('title')
                 dic['completed'] = ele.get('completed')
