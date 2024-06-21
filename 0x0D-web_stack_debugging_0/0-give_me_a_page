@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 #comment
-/etc/init.d/apache2 start
+echo "Hello Holberton" > /var/www/html/index.html
+service apache2 start
