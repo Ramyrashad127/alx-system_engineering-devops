@@ -5,4 +5,3 @@ docker exec -it holberton-container /bin/bash
 echo "Hello Holberton" > /var/www/html/index.html
 service apache2 start
 exit
-curl 0:8080
