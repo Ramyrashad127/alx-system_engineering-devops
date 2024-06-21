@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #comment
-sudo echo "Hello Holberton" > /var/www/html/index.html
 service apache2 start
+sudo echo "Hello Holberton" > /var/www/html/index.html
 curl 0:8080
